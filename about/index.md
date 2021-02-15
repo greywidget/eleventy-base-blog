@@ -7,4 +7,6 @@ eleventyNavigation:
   order: 3
 ---
 
-I am a person that writes stuff.
+I was born in a land far, far away.
+
+*Some might say down under*
