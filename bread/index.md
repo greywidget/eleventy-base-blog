@@ -14,7 +14,7 @@ With a tiny amount of planning, but very little effort - you can make a lovely l
 ![A most excellent fresh loaf of bread!](/img/bread.jpg "Dutch Oven Bread")
 
 ## Equipment
-- 2¾ Quart Dutch Oven
+- 2¾ Quart Dutch Oven *(Just a round or oval oven dish with a lid...)*
 
 ## Ingredients
 - 3 cups (450g) all-purpose flour
