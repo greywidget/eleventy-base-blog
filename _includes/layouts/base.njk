@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="h-100">
+<html lang="en" class="bg-light">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,25 +11,9 @@
     {# <link rel="stylesheet" href="{{ '/css/extras.css' | url }}"> #}
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
     <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
-
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
-
   </head>
-  <body class="d-flex flex-column h-100 bg-light">
+
+  <body class="bg-light">
 
     <nav class="navbar navbar-expand-md navbar-dark bg-secondary">
       <div class="container-fluid">
@@ -53,13 +37,13 @@
     <!-- Main Container -->
     <div class="container-fluid">
 
-      <main class="flex-shrink-0 {% if templateClass %}{{ templateClass }}{% endif %}">
+      <main {% if templateClass %}class="{{templateClass}}"{% endif %}>
         {{ content | safe }}
       </main>
 
     </div> <!-- main container div -->
 
-    <footer class="footer mt-auto py-3 bg-secondary">
+    <footer class="fixed-bottom mt-auto py-3 bg-secondary">
       <div class="container-fluid">
         <span class="text-dark text-small">&copy; greywidget 2021. The cat is not responsible for the content of this site.</span>
       </div>
