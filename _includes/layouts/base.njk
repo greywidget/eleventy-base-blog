@@ -1,40 +1,95 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="h-100">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title or metadata.title }}</title>
     <meta name="description" content="{{ description or metadata.description }}">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
     <link rel="stylesheet" href="{{ '/css/prism-base16-monokai.dark.css' | url }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ '/css/extras.css' | url }}">
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
     <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
   </head>
-  <body class="bg-light text-dark">
+  <body class="d-flex flex-column h-100">
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-secondary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="{{ '/' | url }}">
+          <img src="/img/greywidget.jpg" alt="the author and his cat" width="32" height="32" class="d-inline-block align-top">
+          {{ metadata.title }}
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBarBlog" aria-controls="navBarBlog" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navBarBlog">
+          <div class="navbar-nav">
+          {%- for entry in collections.all | eleventyNavigation %}
+            <a class="nav-link {% if entry.url == page.url %} active{% endif %}"{% if entry.url == page.url %} aria-current="page"{% endif %} href="{{ entry.url | url }}">{{ entry.title }}</a>
+          {%- endfor %}
+          </div>
+        </div>
+      </div>
+    </nav>
+
     <!-- Main Container -->
     <div class="container">
+
+
+
   
-      <header class="row">
+      {# <header class="row">
+
         <div class="col">
-          {# <h1 class="nav"><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1> #}
-          <h1 class="home"><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1>
+          <h1 class="home"><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1> #}
 
           {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
-          <ul class="nav">
-          {%- for entry in collections.all | eleventyNavigation %}
-            <li class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}"><a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
-          {%- endfor %}
-          </ul>
+          {# <ul class="nav"> #}
+          {# {%- for entry in collections.all | eleventyNavigation %} #}
+            {# <li class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}"><a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
+          {%- endfor %} #}
+          {# </ul>
         </div>
-      </header>
+      </header> #}
 
-      <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
+      {# <main {% if templateClass %} class="{{ templateClass }}"{% endif %}> #}
+      <main class="flex-shrink-0 {% if templateClass %}{{ templateClass }}{% endif %}">
         {{ content | safe }}
       </main>
 
-      <footer></footer>
+      {# <footer class="row small text-dark px-0">
+        <div class="col-2 text-start">&copy; 2021</div>
+        <div class="col-10 text-end px-20"><em>Warning: Don't believe everything you read on the internet</em>
+        </div>
+      </footer> #}
+
+
     </div> <!-- main container div -->
+
+    <footer class="footer mt-auto py-3 bg-light">
+      <div class="container">
+        <span class="text-dark">&copy; greywidget 2021</span>
+      </div>
+    </footer>
+    
     <!-- Current page: {{ page.url | url }} -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
   </body>
