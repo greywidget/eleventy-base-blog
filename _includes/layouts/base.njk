@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title or metadata.title }}</title>
     <meta name="description" content="{{ description or metadata.description }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
     <link rel="stylesheet" href="{{ '/css/prism-base16-monokai.dark.css' | url }}">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ '/css/extras.css' | url }}">
+    {# <link rel="stylesheet" href="{{ '/css/extras.css' | url }}"> #}
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
     <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
 
@@ -51,45 +51,20 @@
     </nav>
 
     <!-- Main Container -->
-    <div class="container">
+    <div class="container-fluid">
 
-
-
-  
-      {# <header class="row">
-
-        <div class="col">
-          <h1 class="home"><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1> #}
-
-          {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
-          {# <ul class="nav"> #}
-          {# {%- for entry in collections.all | eleventyNavigation %} #}
-            {# <li class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}"><a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
-          {%- endfor %} #}
-          {# </ul>
-        </div>
-      </header> #}
-
-      {# <main {% if templateClass %} class="{{ templateClass }}"{% endif %}> #}
       <main class="flex-shrink-0 {% if templateClass %}{{ templateClass }}{% endif %}">
         {{ content | safe }}
       </main>
 
-      {# <footer class="row small text-dark px-0">
-        <div class="col-2 text-start">&copy; 2021</div>
-        <div class="col-10 text-end px-20"><em>Warning: Don't believe everything you read on the internet</em>
-        </div>
-      </footer> #}
-
-
     </div> <!-- main container div -->
 
-    <footer class="footer mt-auto py-3 bg-light">
-      <div class="container">
-        <span class="text-dark">&copy; greywidget 2021</span>
+    <footer class="footer mt-auto py-3 bg-secondary">
+      <div class="container-fluid">
+        <span class="text-dark text-small">&copy; greywidget 2021. The cat is not responsible for the content of this site.</span>
       </div>
     </footer>
-    
+
     <!-- Current page: {{ page.url | url }} -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
   </body>
