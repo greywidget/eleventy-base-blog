@@ -17,9 +17,9 @@
 
     <nav class="navbar navbar-expand-md navbar-dark bg-secondary">
       <div class="container-fluid">
-        <a class="navbar-brand" href="{{ '/' | url }}">
-          <img src="/img/greywidget.jpg" alt="the author and his cat" width="32" height="32" class="d-inline-block align-top">
-          {{ metadata.title }}
+        <a class="navbar-brand text-warning" href="{{ '/' | url }}">
+          <img src="/img/greywidget.jpg" alt="the author and his cat" width="48" height="48" class="d-inline-block align-top">
+          <span class="display-6">{{ metadata.title }}</span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBarBlog" aria-controls="navBarBlog" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -43,9 +43,16 @@
 
     </div> <!-- main container div -->
 
-    <footer class="fixed-bottom mt-auto py-3 bg-secondary">
-      <div class="container-fluid">
-        <span class="text-dark text-small">&copy; greywidget 2021. The cat is not responsible for the content of this site.</span>
+    <footer class="fixed-bottom mt-auto py-3 bg-secondary text-warning">
+      <div class="container-fluid text-small">
+        <div class="row">
+          <div class="col-4">
+            &copy; greywidget 2021.
+          </div>
+          <div class="col-8 text-end">
+            The cat is not responsible for the content of this site.
+          </div>
+        </div>
       </div>
     </footer>
 
