@@ -1,7 +1,7 @@
 ---
 layout: layouts/post.njk
 title: Dutch Oven Bread
-templateClass: tmpl-post
+templateClass: col-sm-10
 eleventyNavigation:
   key: Bread
   order: 4

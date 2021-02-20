@@ -6,9 +6,9 @@
     <title>{{ title or metadata.title }}</title>
     <meta name="description" content="{{ description or metadata.description }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
-    <link rel="stylesheet" href="{{ '/css/prism-base16-monokai.dark.css' | url }}">
-    {# <link rel="stylesheet" href="{{ '/css/extras.css' | url }}"> #}
+    {# <link rel="stylesheet" href="{{ '/css/index.css' | url }}"> #}
+    {# <link rel="stylesheet" href="{{ '/css/prism-base16-monokai.dark.css' | url }}"> #}
+    <link rel="stylesheet" href="{{ '/css/extras.css' | url }}">
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
     <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
   </head>
@@ -37,8 +37,11 @@
     <!-- Main Container -->
     <div class="container-fluid">
 
-      <main {% if templateClass %}class="{{templateClass}}"{% endif %}>
-        {{ content | safe }}
+      {# <main {% if templateClass %}class="{{templateClass}}"{% endif %}> #}
+      <main class="row justify-content-center pt-3 main-row">
+        <div {% if templateClass %}class="{{templateClass}}"{% endif %}>
+          {{ content | safe }}
+        </div>
       </main>
 
     </div> <!-- main container div -->
