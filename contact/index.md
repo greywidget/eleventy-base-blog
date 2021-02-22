@@ -25,20 +25,19 @@ enquiry. Please see my <a href="#">Privacy Policy</a> for more details.</p>
 <form name="contact" method="POST" data-netlify="true">
 
   <div class="mb-3">
-    <label for="fullName" class="form-label">Full Name
-      <input type="input" class="form-control" id="fullName">
-    </label>
+    <label for="fullName" class="form-label">Full Name</label>
+    <input type="input" class="form-control" name="fullName" id="fullName">
   </div>
 
   <div class="mb-3">
     <label for="contactEmail" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="contactEmail" aria-describedby="emailHelp required">
+    <input type="email" class="form-control" id="contactEmail" aria-describedby="emailHelp required" name="contactEmail">
     <div id="emailHelp" class="form-text">I'll never share your email with anyone else.</div>
   </div>
 
   <div class="mb-3">
     <label for="contactRole" class="form-label">Your Role</label>
-    <select class="form-select" aria-label="select role" id="contactRole">
+    <select class="form-select" aria-label="select role" id="contactRole" name="contactRole">
     <option selected>Please select your role</option>
     <option value="1">Butcher</option>
     <option value="2">Baker</option>
@@ -48,7 +47,7 @@ enquiry. Please see my <a href="#">Privacy Policy</a> for more details.</p>
 
 <div class="mb-3">
   <label for="contactText" class="form-label">Please leave a message</label>
-  <textarea class="form-control" id="contactText" rows="3"></textarea>
+  <textarea class="form-control" id="contactText" name="contactText" rows="3"></textarea>
 </div>
 
   <div>
