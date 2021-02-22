@@ -25,8 +25,9 @@ enquiry. Please see my <a href="#">Privacy Policy</a> for more details.</p>
 <form name="contact" method="POST" data-netlify="true">
 
   <div class="mb-3">
-    <label for="fullName" class="form-label">Full Name</label>
-    <input type="input" class="form-control" id="fullName">
+    <label for="fullName" class="form-label">Full Name
+      <input type="input" class="form-control" id="fullName">
+    </label>
   </div>
 
   <div class="mb-3">
