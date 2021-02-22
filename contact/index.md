@@ -25,13 +25,18 @@ enquiry. Please see my <a href="#">Privacy Policy</a> for more details.</p>
 <form name="contact" method="POST" data-netlify="true">
 
   <div class="mb-3">
-    <label for="fullName" class="form-label">Full Name</label>
-    <input type="input" class="form-control" name="fullName" id="fullName">
+    <label for="firstName" class="form-label">First Name</label>
+    <input type="input" class="form-control" name="firstName" id="firstName" required>
+  </div>
+
+  <div class="mb-3">
+    <label for="surname" class="form-label">Surname</label>
+    <input type="input" class="form-control" name="surname" id="surname" required>
   </div>
 
   <div class="mb-3">
     <label for="contactEmail" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="contactEmail" aria-describedby="emailHelp required" name="contactEmail">
+    <input type="email" class="form-control" id="contactEmail" aria-describedby="emailHelp required" name="contactEmail" required>
     <div id="emailHelp" class="form-text">I'll never share your email with anyone else.</div>
   </div>
 
@@ -51,8 +56,56 @@ enquiry. Please see my <a href="#">Privacy Policy</a> for more details.</p>
 </div>
 
   <div>
-    <button class="btn btn-secondary text-warning" type="submit">Submit form</button>
+    <button class="btn btn-secondary text-warning form_submit" type="submit">Submit form</button>
   </div>
 </form>
+
+<script>
+    //Simple form validation
+    //get default border colours (to use on input when validation passes)
+    var borderStylePass = document.querySelector('#firstName').style.border;
+    //set fail border colours (to use on input when validation fails)
+    var borderStyleFail = '1px solid red';
+    //get the form submit button
+    var submit_button = document.querySelector('.form_submit');
+    //attach form event listener
+    submit_button.addEventListener("click", function(event){
+        //get the elements we want to validate:
+        var firstName = document.querySelector('#firstName');
+        var surname = document.querySelector('#surname');
+        var contactEmail = document.querySelector('#contactEmail');
+
+        //all validation is assumed to be passed until tested
+        blnValidated = true;
+
+        //For each element to be validated:
+        // 1. Set the border style initially to the valid state
+        // 2. Check if the element has a value
+        // 3. If the element has no value:
+        //    - Set the validation boolean to false
+        //    - Set the element/s border to the invalid state
+        firstName.style.border = borderStylePass;
+        if(!firstName.value){
+            blnValidated = false;
+            firstName.style.border = borderStyleFail;
+        }
+
+        surame.style.border = borderStylePass;
+        if(!surname.value){
+            blnValidated = false;
+            surname.style.border = borderStyleFail;
+        }
+
+        contactEmail.style.border = borderStylePass;
+        if(!contactEmail.value){
+            blnValidated = false;
+            contactEmail.style.border = borderStyleFail;
+        }
+        //if validation failed do not allow the form to submit the data
+        if(!blnValidated){
+            event.preventDefault();
+        }
+    }, false);
+</script>
 </div>
 </div>
