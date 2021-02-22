@@ -21,6 +21,7 @@ enquiry. Please see my <a href="#">Privacy Policy</a> for more details.</p>
 </div>
 <div class="col-sm-6">
 <h2 class=fs-4>Send me a message</h2>
+
 <form name="contact" action="/" method="POST" data-netlify="true">
 
   <div class="mb-3">
@@ -33,17 +34,24 @@ enquiry. Please see my <a href="#">Privacy Policy</a> for more details.</p>
     <input type="email" class="form-control" id="contactEmail" aria-describedby="emailHelp required">
     <div id="emailHelp" class="form-text">I'll never share your email with anyone else.</div>
   </div>
-  <p>
-    <label>Your Role: <select name="role[]" multiple>
-      <option value="leader">Leader</option>
-      <option value="follower">Follower</option>
-    </select></label>
-  </p>
-  <p>
-    <label>Message: <textarea name="message"></textarea></label>
-  </p>
-  <div class="col-12">
-    <button class="btn btn-secondary" type="submit">Submit form</button>
+
+  <div class="mb-3">
+    <label for="contactRole" class="form-label">Your Role</label>
+    <select class="form-select" aria-label="select role" id="contactRole">
+    <option selected>Please select your role</option>
+    <option value="1">Butcher</option>
+    <option value="2">Baker</option>
+    <option value="3">Candlestick Maker</option>
+    </select>
+  </div>
+
+<div class="mb-3">
+  <label for="contactText" class="form-label">Please leave a message</label>
+  <textarea class="form-control" id="contactText" rows="3"></textarea>
+</div>
+
+  <div>
+    <button class="btn btn-secondary text-warning" type="submit">Submit form</button>
   </div>
 </form>
 </div>
