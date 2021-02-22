@@ -16,7 +16,7 @@ enquiry. Please see my <a href="#">Privacy Policy</a> for more details.</p>
 <p class="mb-0">27 gumboot lane</p>
 <p class="mb-0">Waikikamucau</p>
 <p>New Zealand</p>
-<p>Tel: <a href="tel:0113 123 4567">0113 123 4567</a></p>
+<p>Tel: <a href="tel:0113 1234567">0113 1234567</a></p>
 <p><a href="mailto:wotcha@thegreywidget.co.nz">wotcha@thegreywidget.co.nz</a>
 </div>
 <div class="col-sm-6">
@@ -38,7 +38,7 @@ enquiry. Please see my <a href="#">Privacy Policy</a> for more details.</p>
 
   <div class="mb-3">
     <label for="contactEmail" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="contactEmail" aria-describedby="emailHelp required" name="contactEmail" required>
+    <input type="email" class="form-control" id="contactEmail" aria-describedby="emailHelp" name="contactEmail" required>
     <div class="invalid-feedback">Please enter your Email Address</div>
     <div id="emailHelp" class="form-text">I'll never share your email with anyone else.</div>
   </div>
@@ -66,7 +66,7 @@ enquiry. Please see my <a href="#">Privacy Policy</a> for more details.</p>
     <div class="invalid-feedback">Please read and consent to my Terms and Conditions</div>
   </div>
 
-  <div>
+  <div class="d-grid">
     <button class="btn btn-secondary text-warning form_submit" type="submit">Submit form</button>
   </div>
 </form>
