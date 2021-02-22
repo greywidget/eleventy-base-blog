@@ -22,7 +22,7 @@ enquiry. Please see my <a href="#">Privacy Policy</a> for more details.</p>
 <div class="col-sm-6">
 <h2 class=fs-4>Send me a message</h2>
 
-<form name="contact" action="/" method="POST" data-netlify="true">
+<form name="contact" method="POST" data-netlify="true">
 
   <div class="mb-3">
     <label for="fullName" class="form-label">Full Name</label>
