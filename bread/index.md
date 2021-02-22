@@ -7,7 +7,7 @@ eleventyNavigation:
   order: 4
 ---
 
-Dutch oven bread is far easier to make than you might image. Really, the only impediment you might encounter is that you need an oven dish with a lid that can withstand temperatures of 220°C.
+Dutch oven bread is far easier to make than you might imagine. There is no kneading required! The only impediment you might encounter is that you need an oven dish with a lid that can withstand temperatures of 220°C.
 
 With a tiny amount of planning and very little effort - you can make a lovely loaf like this:
 
