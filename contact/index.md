@@ -22,32 +22,36 @@ enquiry. Please see my <a href="#">Privacy Policy</a> for more details.</p>
 <div class="col-sm-6">
 <h2 class=fs-4>Send me a message</h2>
 
-<form name="contact" method="POST" data-netlify="true">
+<form class="needs-validation" name="contact" method="POST" data-netlify="true" novalidate>
 
   <div class="mb-3">
     <label for="firstName" class="form-label">First Name</label>
     <input type="input" class="form-control" name="firstName" id="firstName" required>
+    <div class="invalid-feedback">Please enter your First Name</div>
   </div>
 
   <div class="mb-3">
     <label for="surname" class="form-label">Surname</label>
     <input type="input" class="form-control" name="surname" id="surname" required>
+    <div class="invalid-feedback">Please enter your Surname</div>
   </div>
 
   <div class="mb-3">
     <label for="contactEmail" class="form-label">Email address</label>
     <input type="email" class="form-control" id="contactEmail" aria-describedby="emailHelp required" name="contactEmail" required>
+    <div class="invalid-feedback">Please enter your Email Address</div>
     <div id="emailHelp" class="form-text">I'll never share your email with anyone else.</div>
   </div>
 
   <div class="mb-3">
     <label for="contactRole" class="form-label">Your Role</label>
-    <select class="form-select" aria-label="select role" id="contactRole" name="contactRole">
-    <option selected>Please select your role</option>
+    <select class="form-select" aria-label="select role" id="contactRole" name="contactRole" required>
+    <option selected disabled value="">Please select your role</option>
     <option value="1">Butcher</option>
     <option value="2">Baker</option>
     <option value="3">Candlestick Maker</option>
     </select>
+    <div class="invalid-feedback">Please choose the most applicable Role</div>
   </div>
 
 <div class="mb-3">
@@ -55,57 +59,39 @@ enquiry. Please see my <a href="#">Privacy Policy</a> for more details.</p>
   <textarea class="form-control" id="contactText" name="contactText" rows="3"></textarea>
 </div>
 
+
+  <div class="mb-3">
+    <input type="checkbox" value="" name="checkTandC" id="checkTandC" required>
+    <label for="checkTandC" class="form-label">I have read, and agree to your Terms and Conditions</label>
+    <div class="invalid-feedback">Please read and consent to my Terms and Conditions</div>
+  </div>
+
   <div>
     <button class="btn btn-secondary text-warning form_submit" type="submit">Submit form</button>
   </div>
 </form>
 
 <script>
-    //Simple form validation
-    //get default border colours (to use on input when validation passes)
-    var borderStylePass = document.querySelector('#firstName').style.border;
-    //set fail border colours (to use on input when validation fails)
-    var borderStyleFail = '1px solid red';
-    //get the form submit button
-    var submit_button = document.querySelector('.form_submit');
-    //attach form event listener
-    submit_button.addEventListener("click", function(event){
-        //get the elements we want to validate:
-        var firstName = document.querySelector('#firstName');
-        var surname = document.querySelector('#surname');
-        var contactEmail = document.querySelector('#contactEmail');
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+  'use strict'
 
-        //all validation is assumed to be passed until tested
-        blnValidated = true;
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
 
-        //For each element to be validated:
-        // 1. Set the border style initially to the valid state
-        // 2. Check if the element has a value
-        // 3. If the element has no value:
-        //    - Set the validation boolean to false
-        //    - Set the element/s border to the invalid state
-        firstName.style.border = borderStylePass;
-        if(!firstName.value){
-            blnValidated = false;
-            firstName.style.border = borderStyleFail;
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
         }
 
-        surame.style.border = borderStylePass;
-        if(!surname.value){
-            blnValidated = false;
-            surname.style.border = borderStyleFail;
-        }
-
-        contactEmail.style.border = borderStylePass;
-        if(!contactEmail.value){
-            blnValidated = false;
-            contactEmail.style.border = borderStyleFail;
-        }
-        //if validation failed do not allow the form to submit the data
-        if(!blnValidated){
-            event.preventDefault();
-        }
-    }, false);
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
 </script>
 </div>
 </div>
