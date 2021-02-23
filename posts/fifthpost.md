@@ -2,7 +2,7 @@
 title: This is my fifth post.
 description: On remaining completely hidden.
 date: 2021-02-15
-tags: bushes, incognito, plain sight
+tags: ['bushes', 'incognito', 'plain sight']
 layout: layouts/post.njk
 ---
 You're being pursued. You find yourself an excellent hiding place in a bush or perhaps a small bungalow. Your pursuant furtively creeps towards your location and suddenly cries out: 
