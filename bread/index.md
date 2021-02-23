@@ -25,7 +25,7 @@ With a tiny amount of planning and very little effort - you can make a lovely lo
 ## Preparation
 - Combine the flour, yeast and salt in a large bowl and stir to combine
 - Add the water and mix until the dough forms a ball
-- Cover the bowl with plastic wrap and (optionally) a damp tea towell
+- Cover the bowl with plastic wrap and (optionally) a damp tea towel
 - Let the dough sit covered at room temperature for 18-24 hours
 
 ## Cooking
