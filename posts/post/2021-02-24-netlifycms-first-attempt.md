@@ -6,4 +6,4 @@ tags:
   - CMS
 layout: layouts/post.njk
 ---
-In the words of the immort Dirty Hary - are you feeling lucky punk?
+In the words of the immortal Dirty Hary - are you feeling lucky punk?
