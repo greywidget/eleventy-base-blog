@@ -17,3 +17,8 @@ a[href].direct-link,
 a[href].direct-link:visited {
   color: transparent;
 }
+
+/* Reduce the size of the H2 card title*/
+h3.card-title, h2.card-subtitle {
+    font-size: 1rem;
+}

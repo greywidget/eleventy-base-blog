@@ -4,7 +4,13 @@ layout: layouts/home.njk
 ---
 <h1>Tags</h1>
 
+{% set firstTime = true %}
 {% for tag in collections.tagList %}
   {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+  {% if not firstTime %}
+  |
+  {% else %}
+  {% set firstTime = false %}
+  {% endif %}
   <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
 {% endfor %}
