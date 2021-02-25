@@ -1,6 +1,7 @@
 ---
 layout: layouts/post.njk
 title: Dutch Oven Bread
+description: This is a simple yet tasty no-knead bread.
 templateClass: col-sm-10
 eleventyNavigation:
   key: Bread

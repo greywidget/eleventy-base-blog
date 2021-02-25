@@ -11,4 +11,4 @@ eleventyNavigation:
 <p>You've had a lovely meal and the total came to £67.56 not including a tip of 20 percent.</p>
 <p id="tipText"></p>
 
-<button type="button" class="btn btn-info" onclick="calcTip()">Press Me</button>
+<button type="button" class="btn btn-secondary text-warning" onclick="calcTip()">Press Me</button>
