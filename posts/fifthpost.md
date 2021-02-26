@@ -9,7 +9,7 @@ You're being pursued. You find yourself an excellent hiding place in a bush or p
 
 >*Warmest regards - I've got a lovely piece of cuttlefish for you.*
 
-At this point it is imperitive that you resist the temptation to stand up and wave.
+At this point it is imperative that you resist the temptation to stand up and wave.
 
 You might like to distract yourself with one or more of the following activities:
 - Working through all of the major scales in your head, marvelling at the number of sharps in the key of F♯
