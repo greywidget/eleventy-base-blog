@@ -3,8 +3,8 @@ layout: layouts/base.njk
 templateClass: col-sm-10
 ---
 <h1>{{ title }}</h1>
-<p>{{description}}</p>
-<img src="{{ thumbnail | url }}"/>
+<p class="fst-italic"><mark>{{description}}</mark></p>
+<img class="pb-3 " src="{{ thumbnail | url }}"/>
 
 {{ content | safe }}
 

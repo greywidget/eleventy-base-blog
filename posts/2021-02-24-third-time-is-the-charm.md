@@ -5,6 +5,6 @@ date: 2021-02-24T15:01:40.184Z
 tags:
   - CMS
   - config
-layout: layouts/post.njk
+layout: post
 ---
 Initial tests are looking positve!

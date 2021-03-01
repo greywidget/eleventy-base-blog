@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post
 title: About Me
 templateClass: col-sm-10
 eleventyNavigation:

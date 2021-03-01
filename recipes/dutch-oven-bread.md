@@ -1,18 +1,11 @@
 ---
-layout: post
 title: Dutch Oven Bread
 description: This is a simple yet tasty no-knead bread.
-templateClass: col-sm-10
-eleventyNavigation:
-  key: Bread
-  order: 4
+thumbnail: /img/bread.jpg
+tags:
+  - recipe
+layout: recipe
 ---
-
-Dutch oven bread is far easier to make than you might imagine. There is no kneading required! The only impediment you might encounter is that you need an oven dish with a lid that can withstand temperatures of 220°C.
-
-With a tiny amount of planning and very little effort - you can make a lovely loaf like this:
-
-![A most excellent fresh loaf of bread!](/img/bread.jpg "Dutch Oven Bread")
 
 ## Equipment
 - 2¾ Quart Dutch Oven *(Just a round or oval oven dish with a lid...)*

@@ -1,0 +1,33 @@
+---
+layout: layouts/home.njk
+permalink: /recipes/
+eleventyNavigation:
+  key: recipes
+  order: Latest
+title: Recipe List
+---
+
+<div class="row justify-content-between pb-3">
+<div class="col-2">
+<img src="/img/the_human.png" alt="the author in silhouette" class="d-block w-100">
+</div>
+<div class="col-2">
+<img src="/img/the_cat.png" alt="the author's cat in silhouette" class="d-block w-100">
+</div>
+</div>
+
+<h1>{{title}}</h1>
+
+<ul>
+{% for item in collections.recipe %}
+<li><a href="{{item.url | url}}">{{item.data.title}}</a> - {{item.data.description}}</li>
+{% endfor %}
+</ul>
+{# {% set maxPosts = collections.posts.length | min(postCount) %}
+<h1>Latest {% if maxPosts == 1 %}Post{% else %}{{ maxPosts }} Posts{% endif %}</h1>
+
+{% set postslist = collections.posts | head(-postCount) %}
+{% set postslistCounter = collections.posts | length %}
+{% include "postslistcard.njk" %}
+
+<p>More posts can be found in <a href="{{ '/posts/' | url }}">the archive</a>.</p> #}
