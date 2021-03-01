@@ -7,6 +7,6 @@ tags:
   - two
   - three
   - four
-layout: layouts/post.njk
+layout: post
 ---
 I'm expecting that this post will have four tags

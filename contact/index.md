@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post
 title: What's on your mind?
 templateClass: col-10
 eleventyNavigation:

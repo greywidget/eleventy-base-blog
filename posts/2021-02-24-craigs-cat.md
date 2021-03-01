@@ -6,6 +6,6 @@ tags:
   - test
   - posts
   - jamstack
-layout: layouts/post.njk
+layout: post
 ---
 Don't tell anyone, but I'm pretty sure Craig's cat is the one pulling the strings - the mastermind of the whole operation. Craig's cat is a fan of web design, and has tasked Craig with learning about JAMstack.

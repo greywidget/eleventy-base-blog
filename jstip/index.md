@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post
 title: Simple Javascript Tip Calculation
 description: Perform a calculation using javascript and output the results.
 templateClass: col-sm-10
